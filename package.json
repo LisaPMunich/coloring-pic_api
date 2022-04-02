@@ -1,0 +1,31 @@
+{
+  "name": "coloring-pic_api",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --experimental-json-modules --exec babel-node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LisaPMunich/coloring-pic_api.git"
+  },
+  "author": "LisaPape",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LisaPMunich/coloring-pic_api/issues"
+  },
+  "homepage": "https://github.com/LisaPMunich/coloring-pic_api#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.8",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11"
+  }
+}
