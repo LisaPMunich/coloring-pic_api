@@ -19,7 +19,9 @@ imageRouter.get('/:name', (req, res)=>{
 
     if (listOfImages.length){
         res.status(200).json(listOfImages);
-        // res.send(`<img src="${foundMovie.imageURL}" alt="image URL">`)
+        // res.redirect({listOfImages});
+        // res.Write("<img src=...`)
+        // res.sendFile(filepath);
     } else {
         res.status(404).send('no such image')
     }
