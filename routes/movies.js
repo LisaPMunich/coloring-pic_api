@@ -10,7 +10,6 @@ movieRouter.get('/', (req, res)=>{
     res.status(200).json(movies)
 });
 
-
 // READ - Get movie by title
 movieRouter.get('/:title', (req, res)=>{
     const {title} = req.params;
