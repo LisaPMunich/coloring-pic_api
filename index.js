@@ -7,6 +7,9 @@ import {fileURLToPath} from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+import swaggerUi from "swagger-ui-express";
+import YAML from "yamljs";
+
 import {movieRouter} from "./routes/movies.js";
 import {imageRouter} from "./routes/images.js";
 
@@ -19,6 +22,9 @@ const PORT = 3000;
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log.txt'), {flags: 'a'});
 
 app.use(morgan('combined', {stream: accessLogStream}));
+// DOCUMENTATION
+const swaggerDocument = YAML.load('./swagger.yaml');
+app.use('/documentation.html', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use('/movies', movieRouter);
 app.use('/images', imageRouter);
 app.use(bodyParser.json());

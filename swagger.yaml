@@ -1,0 +1,117 @@
+openapi: 3.0.0
+info:
+  description: >-
+    This API displays a list of children's movies. Users can filter the movies by title, search for specific key-words to display image files. These image files can be downloaded and/or printed.
+  title: Express API for Printing Coloring Pictures
+  version: 1.0.0
+paths:
+  /movies:
+    get:
+      summary: Receive a list of all movies.
+      tags:
+        - movies
+      responses:
+        '200':
+          description: list of all movies
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    description: The movie ID
+                    example: 1
+                  title:
+                    type: string
+                    description: The movie title
+                    example: Paw Patrol
+                  images:
+                    type: object
+                    properties:
+                      ID:
+                        type: integer
+                        description: ID of Image
+                      Name:
+                        type: string
+                        description: Name of selected Image
+                      URL:
+                        type: string
+                        description: url of an image of the movie selected
+  /movies/{title}:
+    parameters:
+      - name: title
+        in: path
+        description: title of movie to fetch
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Receive movie by title.
+      tags:
+        - movies
+      description: Retrieve a single movie from local variable title.
+      responses:
+        '200':
+          description: lists selected movie
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    description: The movie ID
+                    example: 1
+                  title:
+                    type: string
+                    description: The movie title
+                    example: Paw Patrol
+                  images:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        ID:
+                          type: integer
+                          description: ID of Image
+                        Name:
+                          type: string
+                          description: Name of selected Image
+                        URL:
+                          type: string
+                          description: url of an image of the movie selected
+        '400':
+          description: bad request, movie does not exist.
+  /images/{name}:
+    parameters:
+      - name: name
+        in: path
+        description: name of image to fetch
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Read and display image url selected by image name.
+      tags:
+        - images
+      description: Retrieve all images fitting the local variable name
+      responses:
+        '200':
+          description: url of image or images.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  description: url of movie image
+                  example: www.supercoloring.com/sites/default/files/styles/coloring_medium/public/cif/2015/07/025-pikachu-coloring-page.png
+        '404':
+          description: no such image.
+components: {}
+tags:
+  - name: movies
+    description: all endpoints regarding movies
+  - name: images
+    description: all endpoints regarding images of movie
