@@ -24,6 +24,7 @@
     "express": "^4.17.3",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15",
+    "pg": "^8.7.3",
     "swagger-ui-express": "^4.3.0",
     "yamljs": "^0.3.0"
   },
@@ -31,6 +32,7 @@
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.8",
     "@babel/node": "^7.16.8",
-    "@babel/preset-env": "^7.16.11"
+    "@babel/preset-env": "^7.16.11",
+    "knex": "^1.0.5"
   }
 }
