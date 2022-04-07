@@ -1,3 +1,4 @@
 node_modules
 .idea
 not_public
+data/fakedata.js

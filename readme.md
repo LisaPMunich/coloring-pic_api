@@ -25,3 +25,8 @@ Users can filter the movies by title, search for specific key-words to display i
 <img src="https://user-images.githubusercontent.com/99111208/161772716-973b13d5-5ac1-4e83-ad1e-21bd9427ac2e.png">
 
 <img src="https://user-images.githubusercontent.com/99111208/161772727-3c1cf28e-e883-459c-85db-bc3d1c29fac2.png">
+
+**knex - Connection of database to API**
+
+<img src="https://user-images.githubusercontent.com/99111208/161898005-ef5a73b5-3966-4e61-a8eb-0d99840c9381.png">
+<img src="https://user-images.githubusercontent.com/99111208/161898009-8f3cb9b0-1346-41c7-bfe6-859ee267548c.png">
