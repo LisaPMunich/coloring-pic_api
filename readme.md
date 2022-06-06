@@ -1,7 +1,7 @@
 # coloring-pictures_api
 
 This RESTful API is built with Express and PostgreSQL. The purpose of this API is to allow users to print out images from children movies for coloring. 
-Therefore the API displays a list of animated movies, which can be filtered by title or by specific key-words. The selected images can then be printed or downloaded.
+Therefore the app displays a list of animated movies, which can be filtered by title or by specific key-words. The selected images can then be printed or downloaded.
 
 ## The Development process
 
