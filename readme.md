@@ -1,7 +1,17 @@
 # coloring-pictures_api
 
+I had the idea for this project when building the Movie API, because I wanted to utilize the advantages of building the server-side on a relational database.
+
 This RESTful API is built with Express and PostgreSQL. The purpose of this API is to allow users to print out images from children movies for coloring. 
 Therefore the API displays a list of animated movies, which can be filtered by title or by specific key-words. The selected images can then be printed or downloaded.
+
+## Issues I would like to improve given time
+
+- [ ] Create the client-side to use the endpoints served
+    - add feature to print and download the images
+    - implement filter by title or specific key-word
+- [ ] find existing API with pictures from children movies
+
 
 ## The Development process
 
